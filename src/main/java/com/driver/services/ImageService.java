@@ -46,7 +46,9 @@ public class ImageService {
         int imgl = Integer.parseInt(imgarray[0]);
         int imgb = Integer.parseInt(imgarray[1]);
 
-        return  (scrl*scrb)/(imgl*imgb);
+
+        int imageCount=  (scrl*scrb)/(imgl*imgb);
+        return imageCount;
 
     }
 }
