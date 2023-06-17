@@ -51,7 +51,15 @@ public class ImageService {
         int collength = Math.min(scrl,scrb)/Math.min(imgl,imgb);
 
 
-        return  rowlength*collength;
+        int count1=  rowlength*collength;
+
+        int rowlength1 = Math.max(scrl,scrb)/Math.min(imgl,imgb);
+        int collength1 = Math.min(scrl,scrb)/Math.max(imgl,imgb);
+
+        int count2= rowlength1*collength1;
+
+        return Math.max(count1,count2);
+
 
     }
 }
