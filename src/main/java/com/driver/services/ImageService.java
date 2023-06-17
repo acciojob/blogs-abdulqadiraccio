@@ -43,12 +43,15 @@ public class ImageService {
         int scrl = Integer.parseInt(scrarray[0]);
         int scrb = Integer.parseInt(scrarray[1]);
 
+
         int imgl = Integer.parseInt(imgarray[0]);
         int imgb = Integer.parseInt(imgarray[1]);
 
+        int rowlength = Math.max(scrl,scrb)/Math.max(imgl,imgb);
+        int collength = Math.min(scrl,scrb)/Math.min(imgl,imgb);
 
-        int imageCount=  (scrl*scrb)/(imgl*imgb);
-        return imageCount;
+
+        return  rowlength*collength;
 
     }
 }
